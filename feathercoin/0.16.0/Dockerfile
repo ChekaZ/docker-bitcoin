@@ -8,8 +8,8 @@ RUN set -ex \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV FEATHERCOIN_VERSION 0.16.0
-ENV FEATHERCOIN_URL https://github.com/FeatherCoin/Feathercoin/releases/download/v0.16.0/feathercoin-0.16.0-linux64.tar.gz
-ENV FEATHERCOIN_SHA256 908975659c36f6175933340bab50a677c5be15b0630eb30dde8c89c038f5c7cf
+ENV FEATHERCOIN_URL http://downloads.feathercoin.com/feathercoin-0.16.0-x86_64-linux-gnu.tar.gz
+ENV FEATHERCOIN_SHA256 5673DA0CE1141D5417D6EE502DAD8741F36100CDF89B4F67A525475E9EB435DE
 ENV FEATHERCOIN_ASC_URL https://github.com/FeatherCoin/Feathercoin/releases/download/v0.16.0/feathercoin-0.16.0-linux64.tar.gz.asc
 ENV FEATHERCOIN_PGP_KEY 0xf4f958124751434e
 
