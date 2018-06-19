@@ -20,7 +20,7 @@ RUN set -ex \
 	&& echo "$FEATHERCOIN_SHA256 feathercoin.tar.gz" | sha256sum -c - \
 	&& gpg --keyserver keyserver.ubuntu.com --recv-keys "$FEATHERCOIN_PGP_KEY" \
 	&& wget -qO feathercoin.asc "$FEATHERCOIN_ASC_URL" \
-	&& gpg --verify feathercoin.asc \
+	&& gpg --verify feathercoin.asc feathercoin.tar.gz \
 	&& tar -xzvf feathercoin.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm -rf /tmp/*
 
