@@ -7,6 +7,8 @@ if [[ "$1" == "feathercoin-cli" || "$1" == "feathercoin-tx" || "$1" == "featherc
 	cat <<-EOF > "$BITCOIN_DATA/feathercoin.conf"
 	printtoconsole=1
 	rpcallowip=::/0
+	rpcuser=2120078a533d58a8d0d51ab3ce7e7ca0c0db041f4d14d5df689dbd19dda6cf3b
+	rpcpassword=2120078a533d58a8d0d51ab3ce7e7ca0c0db041f4d14d5df689dbd19dda6cf3b
 	${BITCOIN_EXTRA_ARGS}
 	EOF
 	chown bitcoin:bitcoin "$BITCOIN_DATA/feathercoin.conf"
