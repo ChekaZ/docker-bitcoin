@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-RUN groupadd -r feathercoin && useradd -r -m -g feathercoin feathercoin
+RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 RUN set -ex \
 	&& apt-get update \
@@ -25,11 +25,11 @@ RUN set -ex \
 	&& rm -rf /tmp/*
 
 # create data directory
-ENV FEATHERCOIN_DATA /data
-RUN mkdir "$FEATHERCOIN_DATA" \
-	&& chown -R feathercoin:feathercoin "$FEATHERCOIN_DATA" \
-	&& ln -sfn "$FEATHERCOIN_DATA" /home/feathercoin/.feathercoin \
-	&& chown -h feathercoin:feathercoin /home/feathercoin/.feathercoin
+ENV BITCOIN_DATA /data
+RUN mkdir "$BITCOIN_DATA" \
+	&& chown -R bitcoin:bitcoin "$BITCOIN_DATA" \
+	&& ln -sfn "$BITCOIN_DATA" /home/bitcoin/.feathercoin \
+	&& chown -h bitcoin:bitcoin /home/bitcoin/.feathercoin
 VOLUME /data
 
 COPY docker-entrypoint.sh /entrypoint.sh
