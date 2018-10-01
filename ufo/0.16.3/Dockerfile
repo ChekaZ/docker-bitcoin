@@ -7,20 +7,20 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV UFO_VERSION 0.16.3
-ENV UFO_URL https://downloads.ufobject.com/ufo-0.16.3-x86_64-linux-gnu.tar.gz
-ENV UFO_SHA256 1eb058b52985dbdd454dcb16c7c3ea7304bc3c81b403bcaec62b921dcefc09e0
-#ENV UFO_ASC_URL https://github.com/fiscalobject/ufo/releases/download/v0.16.0/ufo-0.16.0-linux64.tar.gz.asc
-#ENV UFO_PGP_KEY 0xf4f958124751434e
+ENV UFO_VERSION 0.16.0
+ENV UFO_URL https://github.com/fiscalobject/ufo/releases/download/v0.16.0/ufo-0.16.0-linux64.tar.gz
+ENV UFO_SHA256 43E845257B4B131C2D98C7F7E62B09886B8FE3B6F5D70BB2F463055CC1434268
+ENV UFO_ASC_URL https://github.com/fiscalobject/ufo/releases/download/v0.16.0/ufo-0.16.0-linux64.tar.gz.asc
+ENV UFO_PGP_KEY 0xf4f958124751434e
 
 # install UFO binaries
 RUN set -ex \
 	&& cd /tmp \
 	&& wget -qO ufo.tar.gz "$UFO_URL" \
 	&& echo "$UFO_SHA256 ufo.tar.gz" | sha256sum -c - \
-	#&& gpg --keyserver keyserver.ubuntu.com --recv-keys "$UFO_PGP_KEY" \
-	#&& wget -qO ufo.asc "$UFO_ASC_URL" \
-	#&& gpg --verify ufo.asc \
+	&& gpg --keyserver keyserver.ubuntu.com --recv-keys "$UFO_PGP_KEY" \
+	&& wget -qO ufo.asc "$UFO_ASC_URL" \
+	&& gpg --verify ufo.asc \
 	&& tar -xzvf ufo.tar.gz -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm -rf /tmp/*
 

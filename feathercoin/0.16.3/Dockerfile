@@ -7,10 +7,10 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV FEATHERCOIN_VERSION 0.16.3
+ENV FEATHERCOIN_VERSION 0.16.0
 ENV FEATHERCOIN_URL http://downloads.feathercoin.com/feathercoin-0.16.3-x86_64-linux-gnu.tar.gz
 ENV FEATHERCOIN_SHA256 0e50fd15c3343072a60cb13603da690a44a97a7f8362162579d91a710b931471
-#ENV FEATHERCOIN_ASC_URL https://github.com/FeatherCoin/Feathercoin/releases/download/v0.16.3/feathercoin-0.16.3-linux64.tar.gz.asc
+#ENV FEATHERCOIN_ASC_URL https://github.com/FeatherCoin/Feathercoin/releases/download/v0.16.0/feathercoin-0.16.0-linux64.tar.gz.asc
 #ENV FEATHERCOIN_PGP_KEY 0xf4f958124751434e
 
 # install feathercoin binaries

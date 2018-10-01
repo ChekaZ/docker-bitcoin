@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bitcoingold",
+    "\\bitcoingold\\0.15.2",
+    "\\feathercoin",
+    "\\feathercoin\\0.16.0",
+    "\\feathercoin\\0.16.3",
+    "\\litecoin",
+    "\\ufo",
+    "\\ufo\\0.16.0",
+    "\\ufo\\0.16.3"
+  ],
+  "SelectedNode": "\\ufo\\0.16.3\\Dockerfile",
+  "PreviewInSolutionExplorer": false
+}
