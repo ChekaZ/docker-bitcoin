@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
