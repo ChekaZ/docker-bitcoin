@@ -7,9 +7,9 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV TREZARCOIN_VERSION 0.13.0
-ENV TREZARCOIN_URL https://trezarcoin.com/trezarcoin-0.13.0.tar.gz
-ENV TREZARCOIN_SHA256 867e05110f08e6132cfbcc9224798fb15879a5becc1932f2b00daedf77276b01
+ENV TREZARCOIN_VERSION 1.2.0
+ENV TREZARCOIN_URL https://trezarcoin.com/Downloads/trezarcoin-1.2.0-x86_64-linux-gnu.tar.gz
+ENV TREZARCOIN_SHA256 0de29d6f95f6d918da80532f912b45f2e362d4ea3f439f809ae3725ba7699bd6
 
 # install trezarcoin binaries
 RUN set -ex \
