@@ -9,7 +9,7 @@ RUN set -ex \
 
 ENV BITCOINPLUS_VERSION 2.7.0
 ENV BITCOINPLUS_URL https://downloads.bitcoinplus.org/bitcoinplus-2.7.0-x86_64.tar.gz
-ENV BITCOINPLUS_SHA256 3ee725846962fa48b6d8aa347d38e4ae04bf0e9c51a3c6fcd5ace83bbe1dc668
+ENV BITCOINPLUS_SHA256 753547b23988124defbf9bee029b4902d6277ce467c63f2ad6588c53817b2251
 
 # install bitcoinplus binaries
 RUN set -ex \
