@@ -9,7 +9,7 @@ RUN set -ex \
 
 ENV TREZARCOIN_VERSION 2.0.1
 ENV TREZARCOIN_URL https://trezarcoin.com/Downloads/trezarcoin-2.0.1-linux64.tar.gz
-ENV TREZARCOIN_SHA256 0562e2434774632338e246dc3b75ff1f6a724ab0c403d63f0326c1e666bf5e188
+ENV TREZARCOIN_SHA256 977bcad1854d394df65d4d685954ffb9282e9943e423fe8babeb898ed224bd53
 
 # install trezarcoin binaries
 RUN set -ex \
